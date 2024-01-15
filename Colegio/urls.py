@@ -22,4 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="Home"),
     path('notas', views.notas, name="Notas"),
+    path('profesor', views.notas, name="Profesor"),
+    path('estudiante', views.notas, name="Estudiante"),
+    path('asignatura', views.notas, name="Asignatura"),
+    path('curso', views.notas, name="Curso"),
+    path('calificacion', views.notas, name="Calificacion"),
 ]
