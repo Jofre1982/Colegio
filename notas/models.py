@@ -15,7 +15,6 @@ class Profesor(models.Model):
     ProfesorID = models.AutoField(primary_key=True)
     Nombre = models.CharField(max_length=50)
     Apellido = models.CharField(max_length=50)
-    FechaNacimiento = models.DateField()
     Telefono = models.CharField(max_length=15)
     CorreoElectronico = models.EmailField()
     Especialidad = models.CharField(max_length=50)

@@ -3,22 +3,22 @@ from django.shortcuts import render, HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse('Home')
+    return render(request, "notas/home.html")
 
 def notas(request):
-    return HttpResponse('Notas')
+    return render(request, "notas/notas.html")
 
 def profesor(request):
-    return HttpResponse('Profesor')
+    return render(request, "notas/profesor.html")
 
 def estudiante(request):
-    return HttpResponse('Estudiante')
+    return render(request, "notas/estudiante.html")
 
 def asignatura(request):
-    return HttpResponse('Asignatura')
+    return render(request, "notas/asignatura.html")
 
 def curso(request):
-    return HttpResponse('Curso')
+    return render(request, "notas/curso.html")
 
 def calificacion(request):
-    return HttpResponse('Calificacion')
+    return render(request, "notas/calificacion.html")
