@@ -5,14 +5,14 @@ from django.shortcuts import render, HttpResponse
 def home(request):
     return render(request, "notas/home.html")
 
-def notas(request):
-    return render(request, "notas/notas.html")
-
 def profesor(request):
     return render(request, "notas/profesor.html")
 
 def estudiante(request):
     return render(request, "notas/estudiante.html")
+
+def administrativo(request):
+    return render(request, "notas/administrativo.html")
 
 def asignatura(request):
     return render(request, "notas/asignatura.html")
