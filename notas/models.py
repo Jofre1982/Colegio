@@ -11,6 +11,9 @@ class Estudiante(models.Model):
     Telefono = models.CharField(max_length=15)
     CorreoElectronico = models.EmailField()
 
+    def __str__(self):
+        return self.Nombre
+
 class Profesor(models.Model):
     ProfesorID = models.AutoField(primary_key=True)
     Nombre = models.CharField(max_length=50)
@@ -18,6 +21,9 @@ class Profesor(models.Model):
     Telefono = models.CharField(max_length=15)
     CorreoElectronico = models.EmailField()
     Especialidad = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.Nombre
 
 class Administrativo(models.Model):
     AdministrativoID = models.AutoField(primary_key=True)
@@ -27,13 +33,22 @@ class Administrativo(models.Model):
     CorreoElectronico = models.EmailField()
     Puesto = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.Nombre
+
 class Curso(models.Model):
     CursoID = models.AutoField(primary_key=True)
     NombreCurso = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.NombreCurso
+
 class Asignatura(models.Model):
     AsignaturaID = models.AutoField(primary_key=True)
     NombreAsignatura = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.NombreAsignatura
 
 class Calificacion(models.Model):
     CalificacionID = models.AutoField(primary_key=True)
@@ -42,6 +57,8 @@ class Calificacion(models.Model):
     ProfesorID = models.ForeignKey(Profesor, on_delete=models.CASCADE)
     Nota = models.DecimalField(max_digits=4, decimal_places=2)
     FechaCalificacion = models.DateField()
+
+    
 
 
 
