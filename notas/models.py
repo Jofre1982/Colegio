@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Modelos de las tablas.
 
 class Estudiante(models.Model):
     EstudianteID = models.AutoField(primary_key=True)
@@ -55,10 +55,11 @@ class Calificacion(models.Model):
     EstudianteID = models.ForeignKey(Estudiante, on_delete=models.CASCADE)
     AsignaturaID = models.ForeignKey(Asignatura, on_delete=models.CASCADE)
     ProfesorID = models.ForeignKey(Profesor, on_delete=models.CASCADE)
+    CursoID = models.ForeignKey(Curso, on_delete=models.CASCADE, default=1)  # Puedes cambiar el valor predeterminado según tus necesidades
     Nota = models.DecimalField(max_digits=4, decimal_places=2)
     FechaCalificacion = models.DateField()
 
-    
+
 
 
 

@@ -13,9 +13,8 @@ class ProfesorAdmin(admin.ModelAdmin):
 
 class AdministrativoAdmin(admin.ModelAdmin):
     list_display=("Nombre", "Apellido")
-    search_fields=("Nombre", "Apellido"," Puesto")
+    search_fields=("Nombre", "Apellido","Puesto")
     
-
 
 admin.site.register(Estudiante, EstudianteAdmin)
 admin.site.register(Profesor, ProfesorAdmin)
